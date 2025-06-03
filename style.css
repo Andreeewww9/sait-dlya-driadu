@@ -1,0 +1,105 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4efff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  #music-toggle {
+    background-color: #6a4caf;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  #music-toggle:hover {
+    background-color: #553d8e;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #d8cfff;
+    padding: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #442a7a;
+    position: relative;
+  }
+  
+  nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #442a7a;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    transition: width 0.3s;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .gallery img {
+    width: 200px;
+    height: auto;
+    margin: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  video {
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center center / contain;
+    animation: floatHeart 10s infinite ease-in-out;
+    opacity: 0.5;
+  }
+  
+  @keyframes floatHeart {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-50px) translateX(10px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
